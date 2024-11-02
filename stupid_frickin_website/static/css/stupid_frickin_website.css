@@ -1,6 +1,25 @@
+@font-face {
+  font-family: 'Goudy Bookletter 1911';
+  src: url('/static/font/goudy_bookletter_1911-webfont.woff') format('woff');
+  font-weight: 200 900;
+}
+
+@font-face {
+  font-family: 'Chunk';
+  src: url('/static/font/ChunkFive-Regular.woff2') format('woff2');
+  font-weight: 200 900;
+}
+
 body {
     box-sizing: border-box;
     background: #f5623b;
+    font-family: "Goudy Bookletter 1911", "serif";
+}
+
+h2 {
+    font-family: Chunk, sans-serif;
+    font-size: 30pt;
+    margin-bottom: 0;
 }
 
 header {
@@ -53,4 +72,5 @@ main {
     border-radius: 2rem;
     border: 10px solid #a6a697;
     padding-inline: 1rem;
+    font-size: 16pt;
 }
