@@ -29,6 +29,16 @@ header {
     padding-bottom: 5rem;
 }
 
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+header a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
 header h1 {
     font-family: monospace;
     padding-inline: 1rem;
@@ -58,10 +68,12 @@ header nav ul {
 header nav ul li {
     padding: 0.5rem;
     padding-inline: 1rem;
+    transition: background 0.2s;
 }
 
 header nav ul li:hover {
     background: #a6a697;
+    transition: background 0.2s;
 }
 
 main {
