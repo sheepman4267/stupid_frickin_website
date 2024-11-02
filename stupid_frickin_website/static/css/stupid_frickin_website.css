@@ -1,0 +1,56 @@
+body {
+    box-sizing: border-box;
+    background: #f5623b;
+}
+
+header {
+    max-width: 90rem;
+    margin-top: 0;
+    margin-inline: auto;
+    padding-bottom: 5rem;
+}
+
+header h1 {
+    font-family: monospace;
+    padding-inline: 1rem;
+    transform: rotate(-6deg);
+    background: beige;
+    padding-block: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+header nav {
+    background: beige;
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: 0;
+    font-family: monospace;
+    font-size: 1.4rem;
+    border-radius: 0.25rem;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: right;
+    min-height: 3rem;
+}
+
+header nav ul li {
+    padding: 0.5rem;
+    padding-inline: 1rem;
+}
+
+header nav ul li:hover {
+    background: #a6a697;
+}
+
+main {
+    background: beige;
+    max-width: 80rem;
+    min-height: 70dvh;
+    margin: auto;
+    border-radius: 2rem;
+    border: 10px solid #a6a697;
+    padding-inline: 1rem;
+}
