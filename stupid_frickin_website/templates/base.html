@@ -32,12 +32,14 @@
     </head>
 
     <body class="{% block body_class %}{% endblock %}">
+        <header>
+            <h1>Sheepman's Personal Stupid Frickin' Website</h1>
+        </header>
         {% wagtailuserbar %}
 
         {% block content %}{% endblock %}
 
         {# Global javascript #}
-        <script type="text/javascript" src="{% static 'js/stupid_frickin_website.js' %}"></script>
 
         {% block extra_js %}
         {# Override this in templates to add extra javascript #}
