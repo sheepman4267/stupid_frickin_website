@@ -1,9 +1,11 @@
 from django.db import models
+from wagtail.admin.panels import FieldPanel
 from wagtail.models import Page
 from wagtail.fields import StreamField, RichTextField
 from wagtail.images import get_image_model
 from wagtail.blocks import RichTextBlock
 from wagtail.images.blocks import ImageBlock
+from core.blocks import FeaturedPageBlock
 # Create your models here.
 
 
@@ -12,6 +14,7 @@ class StandardBlockPage(Page):
         block_types=[
             ('rich_text', RichTextBlock()),
             ('image', ImageBlock()),
+            ('featured_page', FeaturedPageBlock()),
         ]
     )
     featured_image = models.ForeignKey(
@@ -22,3 +25,9 @@ class StandardBlockPage(Page):
         related_name='+',
     )
     summary = RichTextField()
+
+    content_panels = Page.content_panels + [
+        FieldPanel('featured_image'),
+        FieldPanel('body'),
+        FieldPanel('summary'),
+    ]

@@ -86,3 +86,26 @@ main {
     padding-inline: 1rem;
     font-size: 16pt;
 }
+
+.block-featured_page {
+    background: #5e5e54;
+    border-top: 10px solid #f5623b;
+    border-bottom: 10px solid #f5623b;
+    color: beige;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+}
+
+.block-featured_page > img {
+    grid-row: span 2;
+}
+
+.block-featured_page > .feature-title {
+    font-family: "Chunk", sans-serif;
+    font-size: 30pt;
+    padding-left: 1rem;
+}
+
+.block-featured_page > .description {
+    padding-left: 1rem;
+}

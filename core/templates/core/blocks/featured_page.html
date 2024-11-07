@@ -1,0 +1,5 @@
+{% load wagtailimages_tags %}
+{% load wagtailcore_tags %}
+{% image value.featured_page.specific.featured_image fill-150x150 %}
+<span class="feature-title">{{ value.featured_page.specific.title }}</span>
+<div class="description">{{ value.featured_page.specific.summary|richtext }}</div>
