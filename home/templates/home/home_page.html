@@ -11,5 +11,6 @@
     <h2>Welcome!</h2>
     {{ page.body|richtext }}
     <h2>Featured Projects</h2>
+    {% include_block page.featured_projects %}
     <h2>Recent Posts</h2>
 {% endblock content %}

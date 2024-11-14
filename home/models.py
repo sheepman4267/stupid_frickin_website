@@ -1,8 +1,10 @@
 from django.db import models
 from wagtail.admin.panels import FieldPanel
-from wagtail.fields import RichTextField
+from wagtail.fields import RichTextField, StreamField
 
 from wagtail.models import Page
+
+from core.blocks import FeaturedPageBlock
 
 
 class HomePage(Page):
@@ -10,4 +12,13 @@ class HomePage(Page):
 
     content_panels = Page.content_panels + [
         FieldPanel('body'),
+        FieldPanel('featured_projects'),
     ]
+
+    featured_projects = StreamField(
+        block_types=[
+            ('featured_page', FeaturedPageBlock(heading='Featured Project')),
+        ],
+        null=True,
+        blank=True,
+    )
