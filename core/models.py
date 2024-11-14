@@ -35,6 +35,7 @@ class StandardBlockPage(Page):
 
 class PostPage(StandardBlockPage):
     parent_page_types = ['core.StandardBlockPage']
+    template = 'core/standard_block_page.html'
 
     class Meta:
         verbose_name = 'Post'
