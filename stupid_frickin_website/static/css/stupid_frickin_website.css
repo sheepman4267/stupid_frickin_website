@@ -125,3 +125,21 @@ main {
 .block-featured_page + .block-featured_page {
     margin-top: 1rem;
 }
+
+.breadcrumbs > ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-family: monospace;
+    list-style: none;
+    padding: 0;
+}
+
+.breadcrumbs ul li:not(:first-child):before {
+    content: '>';
+    margin-right: 0.5rem;
+}
+
+.breadcrumbs ul > .active:after {
+    content: '⭐';
+}
