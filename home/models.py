@@ -5,6 +5,7 @@ from wagtail.fields import RichTextField, StreamField
 from wagtail.models import Page
 
 from core.blocks import FeaturedPageBlock
+from core.models import PostPage
 
 
 class HomePage(Page):
@@ -22,3 +23,6 @@ class HomePage(Page):
         null=True,
         blank=True,
     )
+
+    def get_posts(self):
+        return PostPage.objects.live().descendant_of(self).order_by('last_published_at')[:5]

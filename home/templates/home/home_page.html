@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% load wagtailcore_tags %}
+{% load wagtailimages_tags %}
 
 {% block body_class %}template-homepage{% endblock %}
 
@@ -13,4 +14,11 @@
     <h2>Featured Projects</h2>
     {% include_block page.featured_projects %}
     <h2>Recent Posts</h2>
+    {% for post in page.get_posts %}
+        <div class="block-featured_page">
+            {% image post.specific.featured_image fill-150x150 %}
+            <span class="feature-title">{{ post.specific.title }}</span>
+            <div class="description">{{ post.specific.summary|richtext }}</div>
+        </div>
+    {% endfor %}
 {% endblock content %}
