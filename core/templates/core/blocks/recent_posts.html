@@ -1,0 +1,11 @@
+{% load wagtailcore_tags %}
+{% load wagtailimages_tags %}
+{% for post in page.get_posts %}
+    <div class="block-featured_page">
+        {% image post.specific.featured_image fill-150x150 %}
+        <span class="feature-title">
+            <a href="{{ post.url }}">{{ post.specific.title }}</a>
+        </span>
+        <div class="description">{{ post.specific.summary|richtext }}</div>
+    </div>
+{% endfor %}
