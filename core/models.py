@@ -31,3 +31,10 @@ class StandardBlockPage(Page):
         FieldPanel('body'),
         FieldPanel('summary'),
     ]
+
+
+class PostPage(StandardBlockPage):
+    parent_page_types = ['core.StandardBlockPage']
+
+    class Meta:
+        verbose_name = 'Post'
