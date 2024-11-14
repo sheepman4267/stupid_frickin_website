@@ -109,3 +109,13 @@ main {
 .block-featured_page > .description {
     padding-left: 1rem;
 }
+
+.feature-title > a {
+    color: beige;
+    text-decoration: underline 3px;
+}
+
+.feature-title > a:hover {
+    text-decoration: underline 6px;
+    color: #d7d7be;
+}
