@@ -63,6 +63,7 @@ header nav ul {
     list-style: none;
     justify-content: right;
     min-height: 3rem;
+    flex-wrap: wrap;
 }
 
 header nav ul li {
