@@ -119,3 +119,7 @@ main {
     text-decoration: underline 6px;
     color: #d7d7be;
 }
+
+.block-featured_page + .block-featured_page {
+    margin-top: 1rem;
+}
