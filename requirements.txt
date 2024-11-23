@@ -2,3 +2,4 @@ Django>=5.1,<5.2
 wagtail>=6.3,<6.4
 wagtailmenus==4.0.1
 wagtail_modeladmin==2.1.0
+whitenoise>=6.8.2,<6.9
