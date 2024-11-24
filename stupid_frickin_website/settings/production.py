@@ -18,7 +18,7 @@ CSRF_TRUSTED_ORIGINS = ['https://' + host for host in ALLOWED_HOSTS]
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / env('SQLITE3_PATH', default='/db/db.sqlite3'),
+        'NAME': env('SQLITE3_PATH', default='/db/db.sqlite3'),
     }
 }
 
