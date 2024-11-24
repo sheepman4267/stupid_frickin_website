@@ -1,14 +1,28 @@
 from .base import *
-
-DEBUG = False
+import environ
+env = environ.Env()
 
 try:
     from base import *
 except ImportError:
     pass
 
-DEBUG = False
+SECRET_KEY = env('SECRET_KEY')
 
-SECRET_KEY = os.environ.get('SECRET_KEY')
-ALLOWED_HOSTS = ['stupid-frickin-website.fly.dev']
-CSRF_TRUSTED_ORIGINS = ['stupid-frickin-website.fly.dev']
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = env('DEBUG', default=False)
+
+ALLOWED_HOSTS = env('ALLOWED_HOSTS', default='stupid.frickin.website')
+CSRF_TRUSTED_ORIGINS = ['https://' + host for host in ALLOWED_HOSTS]
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / env('SQLITE3_PATH', default='/db/db.sqlite3'),
+    }
+}
+
+STATIC_ROOT = env('STATIC_ROOT', default='/static')
+
+MEDIA_ROOT = env('MEDIA_ROOT', default='/media')
+MEDIA_URL = '/media/'

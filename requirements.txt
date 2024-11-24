@@ -3,3 +3,4 @@ wagtail>=6.3,<6.4
 wagtailmenus==4.0.1
 wagtail_modeladmin==2.1.0
 whitenoise>=6.8.2,<6.9
+django-environ==0.11.2
