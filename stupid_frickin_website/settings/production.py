@@ -12,7 +12,7 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env('DEBUG', default=False)
 
-ALLOWED_HOSTS = env('ALLOWED_HOSTS', default='stupid.frickin.website')
+ALLOWED_HOSTS = env('ALLOWED_HOSTS', default=['stupid.frickin.website', ])
 CSRF_TRUSTED_ORIGINS = ['https://' + host for host in ALLOWED_HOSTS]
 
 DATABASES = {
