@@ -1,6 +1,6 @@
-Django>=5.1,<5.2
-wagtail>=6.3,<6.4
-wagtailmenus==4.0.1
-wagtail_modeladmin==2.1.0
-whitenoise>=6.8.2,<6.9
-django-environ==0.11.2
+Django>=6.0.6,<7
+wagtail>=7.4,<8
+wagtailmenus==4.0.7
+wagtail_modeladmin==2.4.0
+whitenoise>=6.12.0,<6.13
+django-environ==0.13.0
