@@ -4,3 +4,4 @@ wagtailmenus==4.0.7
 wagtail_modeladmin==2.4.0
 whitenoise>=6.12.0,<6.13
 django-environ==0.13.0
+sentry-sdk

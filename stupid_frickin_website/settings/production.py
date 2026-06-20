@@ -26,3 +26,10 @@ STATIC_ROOT = env('STATIC_ROOT', default='/static')
 
 MEDIA_ROOT = env('MEDIA_ROOT', default='/media')
 MEDIA_URL = '/media/'
+
+sentry_sdk.init(
+    dsn=env('SENTRY_DSN', default=None),
+    # Add data like request headers and IP for users,
+    # see https://docs.sentry.io/platforms/python/data-management/data-collected/ for more info
+    send_default_pii=True,
+)
